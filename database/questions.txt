@@ -1,0 +1,40 @@
+Which subject do you enjoy studying the most?
+a) Mathematics - engineering
+b) Science - research
+c) English - writing
+
+Are you comfortable working with technology?
+a) Yes - engineering.
+b) No - art
+
+Do you enjoy working with people?
+a) Yes - marketing.
+b) No - research.
+
+Do you like solving complex problems?
+a) Yes - engineering
+b) No - art
+
+Are you interested in making a positive impact on society?
+a) Yes - law.
+b) No - research
+
+Do you enjoy working in a team?
+a) Yes - sales
+b) No - research.
+
+Do you like working with your hands?
+a) Yes - engineering.
+b) No - marketing
+
+Do you enjoy working in a fast-paced environment?
+a) Yes -marketing
+b) No - research
+
+Are you interested in travel?
+a) Yes - business
+b) No - research
+
+Do you prefer routine or variety in your work?
+a) Routine - accounting
+b) Variety - business
