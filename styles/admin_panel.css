@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(38, 156, 244);
+    background: linear-gradient(
+        10deg,
+        rgba(38, 156, 244, 1) 15%,
+        rgba(88, 201, 233, 1) 83%
+    );
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    height: 110vh;
+    box-sizing: border-box;
+    margin-top: 0; /* add this property to remove the default margin */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar li:first-child {
+    margin-top: 15px;
+}
+
+.sidebar li {
+    margin-bottom: 40px; /* increase the spacing between the elements */
+    border-bottom: 1px solid #fff; /* add a separator line */
+}
+
+.sidebar li:last-child {
+    margin-bottom: 0; /* remove the margin from the last element */
+}
+
+.sidebar button {
+    color: #fff;
+    background-color: transparent;
+    border-width: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sidebar button:hover {
+    cursor: pointer;
+}
+
+.sidebar button:focus {
+    color: #fe4e4e;
+}
+
+.content {
+    flex: 4;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    height: 60px;
+    padding: 0px;
+    width: 85%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+}
+
+.logo {
+    color: #fff;
+    padding-left: 20px;
+    font-size: 28px; /* adjust the font size */
+    font-weight: bold; /* adjust the font weight */
+}
+
+.topbar ul {
+    list-style: none;
+    margin: 0;
+    padding-right: 50px;
+    display: flex; /* add this property to make the ul a flex container */
+}
+
+.topbar li {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 550;
+    display: inline-block; /* add this property to make the li elements inline */
+}
+
+.topbar a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main {
+    flex: 1; /* make sure it fills the remaining space */
+    margin-top: 20px; /* add margin to the top to move it below the topnavbar */
+    padding: 0px; /* add some padding for spacing */
+    box-sizing: border-box; /* include padding in the width calculation */
+}
+
+.mainChild {
+    display: none;
+}
+
+/*************** Admin Page Css****************/
+#dashboardPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+h1 {
+    font-size: 72px;
+}
+/*************** View College ****************/
+#viewCollegePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.tableContainer {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    background-color: #55608f;
+}
+
+/*************** Add College and Add Question Css****************/
+
+#addClgForm {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 600px;
+    padding: 20px;
+    width: 500px;
+}
+
+.form2 {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 650px;
+    padding: 20px;
+    width: 500px;
+}
+
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.inp2 {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    margin: 0 5px;
+}
+
+.cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 130px;
+}
+
+.cut2 {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 250px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 130px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+}
+
+.inp2:focus ~ .cut2,
+.inp2:not(:placeholder-shown) ~ .cut2 {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.placeholder2 {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 250px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+}
+
+.input:focus ~ .placeholder {
+    color: #dc2f55;
+}
+
+.inp2:focus ~ .placeholder2,
+.inp2:not(:placeholder-shown) ~ .placeholder2 {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.inp2:not(:placeholder-shown) ~ .placeholder2 {
+    color: #808097;
+}
+
+.inp2:focus ~ .placeholder2 {
+    color: #dc2f55;
+}
+
+.submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.submit:active {
+    background-color: #06b;
+}

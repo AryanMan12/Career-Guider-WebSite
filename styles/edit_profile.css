@@ -1,0 +1,52 @@
+body {
+    background: rgb(38, 156, 244);
+    background: linear-gradient(
+        10deg,
+        rgba(38, 156, 244, 1) 15%,
+        rgba(88, 201, 233, 1) 83%
+    );
+
+    height: 93vh;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgba(38, 156, 244, 1);
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.profile-button:hover {
+    background: rgb(38, 156, 244);
+}
+
+.profile-button:focus {
+    background: rgb(38, 156, 244);
+    box-shadow: none;
+}
+
+.profile-button:active {
+    background: rgb(38, 156, 244);
+    box-shadow: none;
+}
+
+.back:hover {
+    color: rgb(38, 156, 244);
+    cursor: pointer;
+}
+
+.labels {
+    font-size: 11px;
+}
+
+.add-experience:hover {
+    background: rgba(38, 156, 244, 1);
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px rgba(38, 156, 244, 1);
+}

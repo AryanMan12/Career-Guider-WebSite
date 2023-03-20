@@ -1,0 +1,55 @@
+
+// Database Creation
+CREATE SCHEMA `stream_analysis`;
+
+// user table
+CREATE TABLE `stream_analysis`.`user_info` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(60) NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
+  PRIMARY KEY (`user_id`));
+
+// add more user columns
+ALTER TABLE `stream_analysis`.`user_info` 
+ADD COLUMN `profile_url` VARCHAR(256) NULL AFTER `password`,
+ADD COLUMN `name` VARCHAR(45) NULL AFTER `profile_url`,
+ADD COLUMN `about` VARCHAR(200) NULL AFTER `name`;
+ADD COLUMN `hobbies` VARCHAR(200) NULL AFTER `about`;
+
+// admin table
+CREATE TABLE `stream_analysis`.`admin_info` (
+  `admin_id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`admin_id`));
+
+// adding admin
+INSERT INTO `stream_analysis`.`admin_info` (`admin_id`, `username`, `password`) VALUES ('1', 'admin', 'pass');
+
+// college table
+CREATE TABLE `stream_analysis`.`college_info` (
+  `clgId` INT NOT NULL AUTO_INCREMENT,
+  `college_name` VARCHAR(75) NOT NULL,
+  `college_desc` VARCHAR(200) NOT NULL,
+  `college_link` VARCHAR(256) NOT NULL,
+  `college_photo_url` VARCHAR(256) NOT NULL,
+  PRIMARY KEY (`clgId`));
+
+// test questions table
+CREATE TABLE `stream_analysis`.`test_questions` (
+  `questionId` INT NOT NULL AUTO_INCREMENT,
+  `questions` VARCHAR(100) NOT NULL,
+  `opt1` VARCHAR(45) NOT NULL,
+  `opt2` VARCHAR(45) NOT NULL,
+  `opt3` VARCHAR(45) NOT NULL,
+  `opt4` VARCHAR(45) NOT NULL,
+  `car1` VARCHAR(45) NOT NULL,
+  `car2` VARCHAR(45) NOT NULL,
+  `car3` VARCHAR(45) NOT NULL,
+  `car4` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`questionId`));
+
+
+
+
