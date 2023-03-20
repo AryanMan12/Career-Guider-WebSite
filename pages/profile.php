@@ -1,5 +1,35 @@
 <?php
 session_start();
+
+$server = "localhost";
+$username = "root";
+$password = "aryan1212";
+$database = "stream_analysis";
+
+$uName = $_SESSION['username'];
+$email = $_SESSION['email'];
+
+$dbName = "";
+$about = "";
+$prof_url = "";
+$hobbies = "";
+
+$con = mysqli_connect($server, $username, $password, $database);
+if (!$con) {
+    echo "Not connected";
+}
+
+$sql3 = "SELECT * FROM `user_info` WHERE `username`='$uName'";
+$query = mysqli_query($con, $sql3);
+if (!$query) {
+    echo "";
+} else {
+    $row = mysqli_fetch_assoc($query);
+    $dbName = $row['name'];
+    $about = $row['about'];
+    $prof_url = $row['profile_url'];
+    $hobbies = $row['hobbies'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,19 +47,23 @@ session_start();
         <div class="row d-flex justify-content-center">
             <div class="col-md-7">
                 <div class="card p-3 py-4">
+
                     <div class="text-center">
-                        <img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-circle">
+                        <?php
+
+                        echo "<img src='$prof_url' width='100' object-fit='cover' class='rounded-circle'>";
+                        ?>
                     </div>
                     <div class="text-center mt-3">
                         <span class="bg-secondary p-1 px-4 rounded text-white">Student</span>
-                        <h5 class="mt-2 mb-0">Alexender Schidmt</h5>
-                        <span>UI/UX Designer</span>
-                        <div class="px-4 mt-1">
-                            <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi
-                                ut aliquip ex ea commodo consequat. </p>
-                        </div>
+                        <?php
+
+                        echo "<h5 class='mt-2 mb-0'>$dbName</h5>
+                        <span>$hobbies</span>
+                        <div class='px-4 mt-1'>
+                            <p class='fonts'>$about</p>
+                        </div>";
+                        ?>
                         <div class="buttons">
                             <button onclick="javascript:history.go(-1)" class="btn btn-outline-primary px-4">Go
                                 Back</button>

@@ -9,12 +9,16 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: none;
-
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
 }
 
 .card:before {
@@ -82,4 +86,23 @@ body {
     background-color: rgb(38, 156, 244);
     color: #fff;
     height: 40px;
+}
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #fff;
+    text-decoration: none;
 }
