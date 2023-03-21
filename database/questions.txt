@@ -1,40 +1,109 @@
-Which subject do you enjoy studying the most?
-a) Mathematics - engineering
-b) Science - research
-c) English - writing
 
-Are you comfortable working with technology?
-a) Yes - engineering.
-b) No - art
+insert into test_questions values(1, 'Which subject do you enjoy studying the most?', 
+                                     'Mathematics',
+                                     'Science',
+                                     'English',
+                                     'Economics',
+                                     'Engineering',
+                                     'Research',
+                                     'Arts',
+                                     'Business');
 
-Do you enjoy working with people?
-a) Yes - marketing.
-b) No - research.
+insert into test_questions values(2, 'Are you comfortable working with technology?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Engineering',
+                                     'Arts',
+                                     'Research',
+                                     'Business');
 
-Do you like solving complex problems?
-a) Yes - engineering
-b) No - art
+insert into test_questions values(3, 'Do you enjoy working with people?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Marketing',
+                                     'Research',
+                                     'Arts',
+                                     'Engineering');
 
-Are you interested in making a positive impact on society?
-a) Yes - law.
-b) No - research
+insert into test_questions values(4, 'Do you like solving complex problems?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Engineering',
+                                     'Arts',
+                                     'Sales',
+                                     'Law');
 
-Do you enjoy working in a team?
-a) Yes - sales
-b) No - research.
+insert into test_questions values(5, 'Are you interested in making a positive impact on society?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Law',
+                                     'Research',
+                                     'Sales',
+                                     'Arts');
 
-Do you like working with your hands?
-a) Yes - engineering.
-b) No - marketing
+insert into test_questions values(6, 'Do you enjoy working in a team?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Sales',
+                                     'Arts',
+                                     'Research',
+                                     'Marketing');
 
-Do you enjoy working in a fast-paced environment?
-a) Yes -marketing
-b) No - research
+insert into test_questions values(7, 'Do you like working with your hands?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Arts',
+                                     'Marketing',
+                                     'Research',
+                                     'Engineering');
 
-Are you interested in travel?
-a) Yes - business
-b) No - research
+insert into test_questions values(8, 'Do you enjoy working in a fast-paced environment?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Marketing',
+                                     'Arts',
+                                     'Engineering',
+                                     'Law');
 
-Do you prefer routine or variety in your work?
-a) Routine - accounting
-b) Variety - business
+insert into test_questions values(9, 'Are you interested in travel?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Business',
+                                     'Research',
+                                     'Arts',
+                                     'Sales');
+
+insert into test_questions values(10, 'Do you prefer routine or variety in your work?', 
+                                     'Yes',
+                                     'No',
+                                     'Sometimes',
+                                     'May be',
+                                     'Engineering',
+                                     'Business',
+                                     'Arts',
+                                     'Law');
+
+
+
+
+
+
+
+
+

@@ -30,8 +30,7 @@ session_start();
                 </div>
 
                 <div class="buttonWrapper">
-                    <button type="submit" id="submitButton" name="changePass"
-                        class="submitButton pure-button pure-button-primary">
+                    <button type="submit" id="submitButton" name="changePass" class="submitButton pure-button pure-button-primary">
                         <span>Continue</span>
                     </button>
                 </div>
@@ -66,8 +65,8 @@ function changePassword($server, $username, $password, $database)
     $pass = $_POST['password'];
     $cPass = $_POST['confirmPassword'];
 
-    
-if (strcmp($_SESSION['isStudent'], 'true') == 0) {
+
+    if (strcmp($_SESSION['isStudent'], 'true') == 0) {
         $sql1 = "SELECT username FROM user_info WHERE username = '$username'";
     } else {
         $sql1 = "SELECT username FROM admin_info WHERE username = '$username'";
