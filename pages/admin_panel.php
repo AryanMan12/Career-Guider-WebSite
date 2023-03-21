@@ -28,8 +28,8 @@ session_start();
                 </div>
                 <div class="right">
                     <ul>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
+                        <li><a href="./change_password.php">Change
+                                Password</a></li>
                         <li><a href="./admin.php">Logout</a></li>
                     </ul>
                 </div>
@@ -153,7 +153,6 @@ if (isset($_POST['addCollege'])) {
 } else if (isset($_POST['addQuestion'])) {
     addTestData($server, $username, $password, $database);
 }
-
 function addClgData($server, $username, $password, $database)
 {
     $con = mysqli_connect($server, $username, $password, $database);

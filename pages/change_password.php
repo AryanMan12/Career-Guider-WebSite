@@ -66,7 +66,12 @@ function changePassword($server, $username, $password, $database)
     $pass = $_POST['password'];
     $cPass = $_POST['confirmPassword'];
 
-    $sql1 = "SELECT username FROM user_info WHERE username = '$username'";
+    
+if (strcmp($_SESSION['isStudent'], 'true') == 0) {
+        $sql1 = "SELECT username FROM user_info WHERE username = '$username'";
+    } else {
+        $sql1 = "SELECT username FROM admin_info WHERE username = '$username'";
+    }
     $query = mysqli_query($con, $sql1);
     if ($username == "") {
         echo "<script>alert('No User Found'); window.location.replace('login.php');</script>";
@@ -74,8 +79,13 @@ function changePassword($server, $username, $password, $database)
         echo "<script>alert('No User Found'); window.location.replace('login.php');
         </script>";
     } else if (strcmp($pass, $cPass) == 0) {
-        $passwd = password_hash($pass, PASSWORD_DEFAULT);
-        $sql = $con->prepare("UPDATE `user_info` SET `password` = ? WHERE username='$username'");
+        if (strcmp($_SESSION['isStudent'], 'true') == 0) {
+            $passwd = password_hash($pass, PASSWORD_DEFAULT);
+            $sql = $con->prepare("UPDATE `user_info` SET `password` = ? WHERE username='$username'");
+        } else {
+            $passwd = $pass;
+            $sql = $con->prepare("UPDATE `admin_info` SET `password` = ? WHERE username='$username'");
+        }
         $sql->bind_param("s", $passwd);
         echo "<script>alert('Password Changed Successfully...');</script>";
         $sql->execute();

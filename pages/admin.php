@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['isStudent'] = 'false';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +74,7 @@ function AdminLogin($server, $username, $password, $database)
         $verify = strcmp($password, $row['password']);
         if ($verify == 0) {
             header('Location:' . 'admin_panel.php');
+            $_SESSION['username'] = $username;
         } else {
             echo "<script>alert('Incorrect Password'); window.location.replace('admin.php');</script>";
         }

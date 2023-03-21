@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['isStudent'] = 'true';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +71,7 @@ $server = "localhost";
 $username = "root";
 $password = "aryan1212";
 $database = "stream_analysis";
+
 
 if (isset($_POST['sign_in'])) {
     Login($server, $username, $password, $database);
